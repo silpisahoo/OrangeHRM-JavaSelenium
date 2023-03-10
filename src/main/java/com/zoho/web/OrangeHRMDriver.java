@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,6 +63,18 @@ public class OrangeHRMDriver extends OrangeHRMValidationDriver {
 		if(driver!=null)
 		   driver.quit();
 		
+	}
+	public void Scrolltobuttom(){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
+	}
+	public void ScrolltoTop(){
+		((JavascriptExecutor) driver)
+				.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+	}
+	public void Scrolltoelement(WebElement element){
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
 	}
 	
 	public EventFiringWebDriver getCurrentDriver() {

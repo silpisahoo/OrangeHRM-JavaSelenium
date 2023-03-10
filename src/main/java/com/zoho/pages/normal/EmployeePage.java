@@ -22,8 +22,30 @@ public class EmployeePage extends OrangeHRMBasePage {
         @FindBy(xpath = "//a[text()='Add Employee']")
         WebElement addEmployeeTopMenu;
 
+        @FindBy(xpath = "//div[@class='orangehrm-tabs-wrapper'][2]")
+        WebElement ContactDetails;
+
+        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
+        WebElement txtStreet1;
+
+        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[3]")
+        public WebElement txtCity;
+
+        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[4]")
+        public WebElement txtState;
+
+        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[5]")
+        public WebElement txtZip;
+
+        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[7]")
+        public WebElement txtMobileno;
+        @FindBy(xpath = "//button[@type='submit']")
+        public List <WebElement>  btnsSave;
+
+
         @FindBy(name = "lastName")
         WebElement txtLastName;
+
 
         @FindBy(className = "oxd-switch-input")
         public WebElement toggleButton;
@@ -31,8 +53,12 @@ public class EmployeePage extends OrangeHRMBasePage {
         @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
         public WebElement txtUserCreds;
 
+
         @FindBy(css = "[type = submit]")
         WebElement btnSubmit;
+
+        @FindBy(xpath = "(//button[@type='submit'])[2]")
+        WebElement btnSave1;
 
         @FindBy(className = "oxd-main-menu-item--name")
         public List<WebElement> myInfo;
@@ -61,17 +87,60 @@ public class EmployeePage extends OrangeHRMBasePage {
             txtFirstName.sendKeys(firstName);
             txtLastName.sendKeys(lastName);
 
-            //txtUserCreds.sendKeys(Keys.CONTROL, "A");
-            //txtUserCreds.clear();
 
-            //txtUserCreds.sendKeys(employeeID);
             try {
                 Thread.sleep(7000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
             btnSubmit.click();
-            return null;
+            return this;
+        }
+    public OrangeHRMPage saveEmployeePersonalDetails()  {
+
+        getDriver().Scrolltobuttom();
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
+        btnsSave.get(0).click();
+        return this;
+    }
+
+    public OrangeHRMPage createEmployeeContanctDetails(String street1, String city, String state,String zip,String mobileno){
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        getDriver().ScrolltoTop();
+        ContactDetails.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        txtStreet1.sendKeys(street1);
+
+        txtCity.sendKeys(city);
+
+        txtState.sendKeys(state);
+        System.out.println("AAAA");
+        txtZip.sendKeys(zip);
+        System.out.println("AAAA");
+        txtMobileno.sendKeys(mobileno);
+        System.out.println("AAAA");
+
+
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        btnSubmit.click();
+        return this;
+    }
 }

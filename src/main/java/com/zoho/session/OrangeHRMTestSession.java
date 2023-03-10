@@ -65,8 +65,8 @@ public class OrangeHRMTestSession {
 		if(reports !=null)
 			reports.flush();
 		// quit the browser
-		if(getCon() !=null)
-			getCon().quit();
+		//if(getCon() !=null)
+			//getCon().quit();
 		
 	}
 	

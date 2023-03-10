@@ -29,4 +29,16 @@ public class HomePage extends OrangeHRMBasePage {
         }
         return this;
     }
-}
+    public OrangeHRMPage gotoleave() {
+
+        getDriver().click(Constants.LEAVE_LEFT_MENU);
+        return new  LeavePage((getSession().getCon().getCurrentDriver()));
+    }
+    public OrangeHRMPage gotoTime() {
+
+        getDriver().click(Constants.TIME_LEFT_MENU);
+        return new TimePage((getSession().getCon().getCurrentDriver()));
+    }
+
+    }
+

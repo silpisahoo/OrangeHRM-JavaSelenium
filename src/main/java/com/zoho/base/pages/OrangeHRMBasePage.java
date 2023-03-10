@@ -107,6 +107,70 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 		return null;
 	}
 
+	@Override
+	public OrangeHRMPage saveEmployeePersonalDetails() {
+		return null;
+	}
+
+
+	@Override
+	public OrangeHRMPage createEmployeeContanctDetails(String street1, String city, String state, String zip, String mobileno) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoleave() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage AddLeaveComment(String comment) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage Applyleave() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage Assignleave(String empName) {
+		return null;
+	}
+
+
+	@Override
+	public OrangeHRMPage selectMyTimesheet() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage selectEmployeeTimesheet(String empName) {
+		return null;
+	}
+
+
+	@Override
+	public OrangeHRMPage gotoTime() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage EnterTimeForTimesheet(String projectName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage Projectinfo(String empName, String description) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage Projectinfoforproject(String Name, String customerName, String description, String projectAdmin) {
+		return null;
+	}
+
+
 	public OrangeHRMPage validateIntermediatePageOptions() {
 		return null;
 	}

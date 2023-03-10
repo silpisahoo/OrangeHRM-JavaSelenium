@@ -44,6 +44,20 @@ public interface OrangeHRMPage {
     OrangeHRMPage gotoPIM();
     OrangeHRMPage searchEmployee(String empName);
     OrangeHRMPage createEmployee(String firstName, String lastName, String employeeID);
+    OrangeHRMPage saveEmployeePersonalDetails();
+    OrangeHRMPage createEmployeeContanctDetails(String street1, String city, String state,String zip,String mobileno);
+    OrangeHRMPage gotoleave();
+    OrangeHRMPage AddLeaveComment(String comment);
+    OrangeHRMPage Applyleave();
+    OrangeHRMPage Assignleave(String empName );
+    OrangeHRMPage selectMyTimesheet();
+
+    OrangeHRMPage selectEmployeeTimesheet( String empName);
+    OrangeHRMPage gotoTime();
+    OrangeHRMPage EnterTimeForTimesheet(String projectName);
+    OrangeHRMPage Projectinfo(String empName , String description);
+    OrangeHRMPage Projectinfoforproject(String Name, String customerName, String description, String projectAdmin);
+
 
 
 

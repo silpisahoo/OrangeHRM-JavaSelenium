@@ -2,6 +2,7 @@ package com.zoho.testcases;
 
 
 import com.zoho.base.pages.Constants;
+import com.zoho.base.pages.OrangeHRMPage;
 import com.zoho.pages.normal.LaunchPage;
 import com.zoho.session.OrangeHRMTestSession;
 import com.zoho.util.DataUtil;
@@ -55,9 +56,12 @@ public class EmployeeTest {
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoPIM()
-                .createEmployee(data.get("FirstName"),data.get("LastName"),data.get("EmployeeID"));
+                .createEmployee(data.get("FirstName"),data.get("LastName"),data.get("EmployeeID"))
+                .saveEmployeePersonalDetails()
+                .createEmployeeContanctDetails(data.get("Street1"),data.get("City"),data.get("State"),data.get("Zip"),data.get("MobileNo"));
 
     }
+
 
     @DataProvider
     public Object[][] getData(){

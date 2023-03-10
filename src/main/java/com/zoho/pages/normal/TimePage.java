@@ -1,0 +1,245 @@
+package com.zoho.pages.normal;
+
+import com.zoho.base.pages.OrangeHRMBasePage;
+import com.zoho.base.pages.OrangeHRMPage;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+
+public class TimePage extends OrangeHRMBasePage {
+    public TimePage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(xpath = "//span[@class='oxd-topbar-body-nav-tab-item']")
+    WebElement TimesheetsTopMenu;
+
+    @FindBy(xpath = "//a[text()='My Timesheets']")
+    WebElement MyTimesheetTopMenu;
+
+    @FindBy(xpath = "//a[text()='Employee Timesheets']")
+    WebElement EmployeeTimesheetTopMenu;
+
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--ghost']")
+    WebElement Editbtn;
+
+    @FindBy(xpath = "//input[@class='oxd-input oxd-input--active']")
+    List<WebElement> txtentertime;
+
+    @FindBy(xpath = "(//input[@placeholder='Type for hints...'])[1]")
+    WebElement employeeNameAutoSuggest;
+    @FindBy(xpath = "(//input[@placeholder='Type for hints...'])[1]")
+    WebElement customerNameAutoSuggest;
+
+    @FindBy(xpath = "(//input[@placeholder='Type for hints...'])[2]")
+    WebElement Projectadmin;
+
+    @FindBy(xpath = "//div[@class='oxd-select-text-input']")
+    WebElement Selectdropdown;
+
+    @FindBy(xpath = "//input[@placeholder='Type for hints...']")
+    WebElement projectAutoSuggestion;
+
+    @FindBy(xpath = " //i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
+    WebElement activityDropdown;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    WebElement Savebtn;
+    @FindBy(xpath = "//button[@type='submit']")
+    WebElement Viewbtn;
+
+    @FindBy(xpath = "(//span[@class='oxd-topbar-body-nav-tab-item'])[4]")
+    WebElement ProjectinfoTopMenu;
+
+    @FindBy(xpath = "//a[text()='Customers']")
+    WebElement CustomerTopMenu;
+
+    @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
+    WebElement Addbtn;
+
+    @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
+    WebElement CustomerName;
+
+    @FindBy(xpath = "//textarea[@placeholder='Type description here']")
+    WebElement Descriptiontext;
+    @FindBy(xpath = "//button[@type='submit']")
+    WebElement Savebtn2;
+
+    @FindBy(xpath = "//a[text()='Projects']")
+    WebElement ProjectTopMenu;
+
+
+    public OrangeHRMPage selectMyTimesheet() {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        TimesheetsTopMenu.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        MyTimesheetTopMenu.click();
+        Editbtn.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Savebtn.click();
+        //    employeeNameAutoSuggest.sendKeys(empName);
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+//        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+//        employeeNameAutoSuggest.sendKeys(Keys.ENTER);
+//        Selectdropdown.click();
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        Selectdropdown.sendKeys(Keys.ARROW_DOWN);
+//        Selectdropdown.sendKeys(Keys.ARROW_DOWN);
+//        Selectdropdown.sendKeys(Keys.ARROW_DOWN);
+//        Selectdropdown.sendKeys(Keys.ARROW_DOWN);
+
+        return this;
+    }
+
+//    public OrangeHRMPage EnterTimeForTimesheet(String projectName) {
+//        projectAutoSuggestion.sendKeys(projectName);
+//        try {
+//            Thread.sleep(4000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        projectAutoSuggestion.sendKeys(Keys.ARROW_DOWN);
+//        projectAutoSuggestion.sendKeys(Keys.ARROW_DOWN);
+//        projectAutoSuggestion.sendKeys(Keys.ENTER);
+//
+//        activityDropdown.click();
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        activityDropdown.sendKeys(Keys.ARROW_DOWN);
+//        activityDropdown.sendKeys(Keys.ARROW_DOWN);
+//        activityDropdown.sendKeys(Keys.ENTER);
+//        for (int i = 2; i <=8 ; i++) {
+//            txtentertime.get(i).clear();
+//            txtentertime.get(i).sendKeys("9:00");
+//
+//        }
+//        return this;
+//    }
+
+    public OrangeHRMPage selectEmployeeTimesheet(String empName) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        TimesheetsTopMenu.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        EmployeeTimesheetTopMenu.click();
+        employeeNameAutoSuggest.sendKeys(empName);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+        employeeNameAutoSuggest.sendKeys(Keys.ENTER);
+
+        Viewbtn.click();
+
+        return this;
+    }
+
+    public OrangeHRMPage Projectinfo(String empName, String description) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ProjectinfoTopMenu.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        CustomerTopMenu.click();
+        Addbtn.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        CustomerName.sendKeys(empName);
+        Descriptiontext.sendKeys(description);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Savebtn2.click();
+
+        return this;
+
+    }
+
+    public OrangeHRMPage Projectinfoforproject(String Name, String customerName, String description, String projectAdmin) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ProjectinfoTopMenu.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        ProjectTopMenu.click();
+        Addbtn.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        CustomerName.sendKeys(Name);
+        customerNameAutoSuggest.sendKeys(customerName);
+        Descriptiontext.sendKeys(description);
+        Projectadmin.sendKeys(projectAdmin);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+        employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+        employeeNameAutoSuggest.sendKeys(Keys.ENTER);
+        Savebtn2.click();
+        return this;
+    }
+}

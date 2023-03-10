@@ -1,6 +1,7 @@
 package com.zoho.web;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.asserts.SoftAssert;
 
@@ -22,6 +23,9 @@ public interface WebConnector extends OrangeHRMWebConnector {
 	void log(String message);
 	void fail(String message);
 	void click(String object);
+	public void Scrolltobuttom();
+	public void Scrolltoelement(WebElement element);
+	public void ScrolltoTop();
 	void type(String objectKey,String data);
 	void clear(String objectKey);
 	void select(String objectKey,String data);
