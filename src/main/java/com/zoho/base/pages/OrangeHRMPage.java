@@ -55,6 +55,21 @@ public interface OrangeHRMPage {
     OrangeHRMPage selectEmployeeTimesheet( String empName);
     OrangeHRMPage gotoTime();
     OrangeHRMPage EnterTimeForTimesheet(String projectName);
+
+    OrangeHRMPage gotoRecruitment();
+
+    OrangeHRMPage addCandidatesdetails(String firstName , String middleName, String lastName ,String gmailId);
+
+    OrangeHRMPage viewVacanciesdetails();
+
+    OrangeHRMPage gotoMyInfo();
+
+    OrangeHRMPage gotoDirectory();
+
+    OrangeHRMPage directory(String empName);
+
+    OrangeHRMPage gotoMaintenance();
+    OrangeHRMPage loginTest(String passsword);
     OrangeHRMPage Projectinfo(String empName , String description);
     OrangeHRMPage Projectinfoforproject(String Name, String customerName, String description, String projectAdmin);
 

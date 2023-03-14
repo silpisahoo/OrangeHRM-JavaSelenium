@@ -39,6 +39,33 @@ public class HomePage extends OrangeHRMBasePage {
         getDriver().click(Constants.TIME_LEFT_MENU);
         return new TimePage((getSession().getCon().getCurrentDriver()));
     }
+    public OrangeHRMPage gotoMyInfo() {
 
+        getDriver().click(Constants.MYINFO_LEFT_MENU);
+        return new MyInfoPage((getSession().getCon().getCurrentDriver()));
+    }
+    public OrangeHRMPage gotoRecruitment() {
+
+        getDriver().click(Constants.RECRUITMENT_LEFT_MENU);
+        return new RecruitmentPage((getSession().getCon().getCurrentDriver()));
+    }
+
+    public OrangeHRMPage gotoDirectory() {
+
+        getDriver().click(Constants.DIRECTORY_LEFT_MENU);
+        return new DirectoryPage((getSession().getCon().getCurrentDriver()));
+    }
+
+    public OrangeHRMPage gotoMaintenance() {
+
+        getDriver().click(Constants.MAINTENANCE_LEFT_MENU);
+        return new MaintenancePage((getSession().getCon().getCurrentDriver()));
+    }
+
+    public OrangeHRMPage gotoBuzz() {
+
+        getDriver().click(Constants.BUZZ_LEFT_MENU);
+        return new MaintenancePage((getSession().getCon().getCurrentDriver()));
+    }
     }
 

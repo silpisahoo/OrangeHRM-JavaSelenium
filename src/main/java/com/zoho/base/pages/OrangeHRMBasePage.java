@@ -161,6 +161,47 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
+	public OrangeHRMPage addCandidatesdetails(String firstName, String middleName, String lastName, String gmailId) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage viewVacanciesdetails() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoRecruitment() {
+		return null;
+	}
+
+
+	@Override
+	public OrangeHRMPage gotoMyInfo() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoDirectory() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage directory(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoMaintenance() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage loginTest(String passsword) {
+		return null;
+	}
+
+	@Override
 	public OrangeHRMPage Projectinfo(String empName, String description) {
 		return null;
 	}

@@ -123,6 +123,13 @@ public class Constants {
 	public static final String LEAVE_LEFT_MENU ="leave_left_menu_xpath" ;
 	//public static final String APPLY_LEFT_MENU ="apply_left_menu_xpath" ;
 	public static final String TIME_LEFT_MENU ="time_left_menu_xpath" ;
+	public static final String RECRUITMENT_LEFT_MENU ="recruitment_left_menu_xpath" ;
+	public static final String DIRECTORY_LEFT_MENU ="directory_left_menu_xpath" ;
+	public static final String MYINFO_LEFT_MENU ="myinfo_left_menu_xpath" ;
+
+	public static final String MAINTENANCE_LEFT_MENU ="maintenance_left_menu_xpath" ;
+
+	public static final String BUZZ_LEFT_MENU ="buzz_left_menu_xpath" ;
 	public static final String EMPNAME_SEARCH_FIELD_KEY = "empname_search_field_xpath";
 	public static final String EMPNAME_SEARCH_DROPDOWN_KEY = "empname_search_dropdown_element_xpath" ;
 }

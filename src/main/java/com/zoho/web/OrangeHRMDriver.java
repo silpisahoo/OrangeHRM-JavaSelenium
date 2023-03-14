@@ -40,9 +40,10 @@ public class OrangeHRMDriver extends OrangeHRMValidationDriver {
 	public void openBrowser(String bName) {
 		log("Opening the browser "+bName );
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver1.exe");
 		ChromeOptions opt = new ChromeOptions();
 		opt.addArguments("--disable-notifications");
+		opt.addArguments("--remote-allow-origins=*");
 		driver = new EventFiringWebDriver(new ChromeDriver(opt));// Launching the LaunchPage
 		
 		driver.register(new ZohoEventListener());
