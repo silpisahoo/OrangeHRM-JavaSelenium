@@ -50,7 +50,7 @@ public class RecruitmentTest {
                 .submitUsernameAndPassword(username, password)
                 .gotoRecruitment()
                 .addCandidatesdetails(data.get("FirstName"),data.get("MiddleName"),data.get("LastName"),data.get("Email"))
-                .viewVacanciesdetails();
+                .viewVacanciesdetails(data.get("Vacancy"),data.get("Description"),data.get("MangerName"));
     }
 
     @DataProvider

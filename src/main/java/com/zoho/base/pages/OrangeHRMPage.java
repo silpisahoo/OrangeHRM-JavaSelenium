@@ -41,6 +41,16 @@ public interface OrangeHRMPage {
     // Zoho - session
     void log(String message);
     OrangeHRMPage gotoAdmin();
+    OrangeHRMPage SearchEmployee(String empName);
+    OrangeHRMPage createUser(String empName , String userName , String passWord , String confirmPassword);
+    OrangeHRMPage searchaddedEmployeeDetails(String addedempName);
+    OrangeHRMPage jobTitleMenu( String jobTitle , String descriptionBox);
+    OrangeHRMPage organizationMenu();
+    OrangeHRMPage qualificationmenu(String name,String description,String level,String licenses);
+    OrangeHRMPage nationalitiesMenu(String nationName);
+    OrangeHRMPage corporateBrandingMenu();
+    OrangeHRMPage configurationMenu(String testEmail);
+    OrangeHRMPage checkIfUserExists(String username);
     OrangeHRMPage gotoPIM();
     OrangeHRMPage searchEmployee(String empName);
     OrangeHRMPage createEmployee(String firstName, String lastName, String employeeID);
@@ -60,16 +70,42 @@ public interface OrangeHRMPage {
 
     OrangeHRMPage addCandidatesdetails(String firstName , String middleName, String lastName ,String gmailId);
 
-    OrangeHRMPage viewVacanciesdetails();
+    OrangeHRMPage viewVacanciesdetails(String vName , String description ,String empName);
 
     OrangeHRMPage gotoMyInfo();
+    OrangeHRMPage personalDetails();
+    OrangeHRMPage contactDetails(String mobileNum);
+    OrangeHRMPage emergencyContact(String empnamr , String relationshipName ,String mobileNo);
+    OrangeHRMPage dependent(String empnamr );
+    OrangeHRMPage immigration( );
+    OrangeHRMPage job();
+    OrangeHRMPage salaryPage();
+    OrangeHRMPage taxPage();
+    OrangeHRMPage reportPage();
+    OrangeHRMPage qualificationPage();
+    OrangeHRMPage membershipPage();
+    OrangeHRMPage gotoPerformance();
+    OrangeHRMPage manageReviewstest(String empName);
+    OrangeHRMPage myReviewstest();
+    OrangeHRMPage myTrackerstest( String log , String comment);
+    OrangeHRMPage cinfigureTest( String empName);
+
+    OrangeHRMPage employeeTrackerstest( String empName);
 
     OrangeHRMPage gotoDirectory();
 
     OrangeHRMPage directory(String empName);
 
     OrangeHRMPage gotoMaintenance();
-    OrangeHRMPage loginTest(String passsword);
+    OrangeHRMPage loginTest(String passsword , String vacancyName);
+
+    OrangeHRMPage AccessRecords(String empName);
+
+    OrangeHRMPage gotoBuzz();
+    OrangeHRMPage BuzzNewsfeedtest( String statusUpdate ,String commentBox);
+    OrangeHRMPage mostrecentposttest();
+    OrangeHRMPage mostLikedposttest();
+    OrangeHRMPage mostComentedtest();
     OrangeHRMPage Projectinfo(String empName , String description);
     OrangeHRMPage Projectinfoforproject(String Name, String customerName, String description, String projectAdmin);
 

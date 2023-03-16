@@ -93,6 +93,57 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	public OrangeHRMPage gotoAdmin() {
 		return null;
 	}
+
+	@Override
+	public OrangeHRMPage SearchEmployee(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage createUser(String empName, String userName, String passWord, String confirmPassword) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage searchaddedEmployeeDetails(String addedempName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage jobTitleMenu( String jobTitle , String descriptionBox) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage organizationMenu() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage qualificationmenu(String name,String description,String level,String licenses) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage nationalitiesMenu(String nationName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage corporateBrandingMenu() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage configurationMenu(String testEmail) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage checkIfUserExists(String username) {
+		return null;
+	}
+
 	@Override
 	public OrangeHRMPage gotoPIM() {
 		return null;
@@ -166,7 +217,7 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
-	public OrangeHRMPage viewVacanciesdetails() {
+	public OrangeHRMPage viewVacanciesdetails(String vName , String description ,String empName) {
 		return null;
 	}
 
@@ -178,6 +229,91 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 
 	@Override
 	public OrangeHRMPage gotoMyInfo() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage personalDetails() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage contactDetails(String mobileNum) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage emergencyContact(String empnamr , String relationshipName ,String mobileNo) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage dependent(String empnamr) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage immigration() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage job() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage salaryPage() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage taxPage() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage reportPage() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage qualificationPage() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage membershipPage() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoPerformance() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage manageReviewstest(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage myReviewstest() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage myTrackerstest(String log, String comment) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage cinfigureTest( String empName){
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage employeeTrackerstest(String empName) {
 		return null;
 	}
 
@@ -197,7 +333,37 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
-	public OrangeHRMPage loginTest(String passsword) {
+	public OrangeHRMPage loginTest(String passsword , String vacancyName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage AccessRecords(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage gotoBuzz() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage BuzzNewsfeedtest( String statusUpdate ,String commentBox){
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage mostrecentposttest() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage mostLikedposttest() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage mostComentedtest() {
 		return null;
 	}
 

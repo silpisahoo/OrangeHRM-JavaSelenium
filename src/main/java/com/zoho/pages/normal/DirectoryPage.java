@@ -24,6 +24,9 @@ import org.openqa.selenium.support.PageFactory;
         @FindBy(xpath = "//button[@type='submit']")
         WebElement searchButton;
 
+        @FindBy(xpath = "//div[@class='oxd-sheet oxd-sheet--rounded oxd-sheet--white orangehrm-directory-card']")
+        WebElement empfield;
+
         public OrangeHRMPage directory(String empName) {
             System.out.println("gg");
             try {
@@ -68,6 +71,8 @@ import org.openqa.selenium.support.PageFactory;
             Selectdropdown2.sendKeys(Keys.ARROW_DOWN);
             Selectdropdown2.sendKeys(Keys.ENTER);
             searchButton.click();
+            getDriver().Scrolltobuttom();
+            empfield.click();
             return this;
         }
     }

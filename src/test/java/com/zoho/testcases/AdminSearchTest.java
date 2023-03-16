@@ -21,7 +21,7 @@ public class AdminSearchTest {
     @BeforeMethod
     public void init() {
         session= new OrangeHRMTestSession();
-        session.init("Login Test");
+        session.init("AdminSearchTest");
 
     }
 
@@ -43,14 +43,26 @@ public class AdminSearchTest {
 
         String username = data.get("Username");
         String password=data.get("Password");
-
+        System.out.println("^^^^"+username);
+        System.out.println("^^^^"+password);
         new LaunchPage()
                 .openBrowser("chrome")
                 .gotoLoginPage()
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoAdmin()
-                .searchEmployee(data.get("EmployeeName"));
+                //.SearchEmployee(data.get("EmployeeName"))
+                //.createUser(data.get("EmployeeName"),data.get("UserName"),data.get("UpdatePassword"),data.get("ConfirmPassword"))
+                //.searchaddedEmployeeDetails(data.get("UpdateEmployeeName"))
+                //.jobTitleMenu(data.get("JobTitle"),data.get("Description"))
+               // .organizationMenu()
+              //  .qualificationmenu(data.get("Skills"),data.get("Skilldescription"),data.get("Level"),data.get("Licenses"))
+              //  .nationalitiesMenu(data.get("NationName"))
+               // .corporateBrandingMenu()
+                .configurationMenu(data.get("TestEmailid"));
+
+
+               // .checkIfUserExists(data.get("EmployeeName"));
 
     }
 

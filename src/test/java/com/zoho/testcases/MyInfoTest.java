@@ -51,7 +51,18 @@ public class MyInfoTest {
                 .gotoLoginPage()
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
-                .gotoMyInfo();
+                .gotoMyInfo()
+                .personalDetails()
+                .contactDetails(data.get("MobileNo"))
+                .emergencyContact(data.get("Name"),data.get("Relationship"),data.get("MobileNo"))
+                .dependent(data.get("Name"))
+                .immigration()
+                .job()
+                .salaryPage()
+                .taxPage()
+                .reportPage()
+                .qualificationPage()
+                .membershipPage();
     }
 
     @DataProvider

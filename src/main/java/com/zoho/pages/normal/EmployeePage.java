@@ -50,8 +50,8 @@ public class EmployeePage extends OrangeHRMBasePage {
         @FindBy(className = "oxd-switch-input")
         public WebElement toggleButton;
 
-        @FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
-        public WebElement txtUserCreds;
+        @FindBy(xpath = "//input[@placeholder='Type for hints...']")
+        public WebElement employeeNameAutoSuggest;
 
 
         @FindBy(css = "[type = submit]")
@@ -72,13 +72,23 @@ public class EmployeePage extends OrangeHRMBasePage {
         @FindBy(className = "oxd-input-field-error-message")
         public WebElement lblValidationError;
 
+
         public EmployeePage(WebDriver driver){
             PageFactory.initElements(driver, this);
         }
 
-        public String checkIfUserExists(String username){
-            txtUserCreds.sendKeys(username);
-            return lblValidationError.getText();
+        public OrangeHRMPage checkIfUserExists(String username){
+            employeeNameAutoSuggest.sendKeys(username);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+            employeeNameAutoSuggest.sendKeys(Keys.ARROW_DOWN);
+            employeeNameAutoSuggest.sendKeys(Keys.ENTER);
+            //   return lblValidationError.getText();
+            return this;
         }
 
         public OrangeHRMPage createEmployee(String firstName, String lastName, String employeeID){

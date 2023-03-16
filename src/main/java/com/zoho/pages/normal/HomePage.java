@@ -9,25 +9,11 @@ public class HomePage extends OrangeHRMBasePage {
 
     public OrangeHRMPage gotoAdmin() {
         getDriver().click(Constants.ADMIN_LEFT_MENU);
-        return this;
+        return new AdminPage(getSession().getCon().getCurrentDriver());
     }
     public OrangeHRMPage gotoPIM() {
         getDriver().click(Constants.PIM_LEFT_MENU);
         return new EmployeePage(getSession().getCon().getCurrentDriver());
-    }
-    public OrangeHRMPage searchEmployee(String empName) {
-        getDriver().type(Constants.EMPNAME_SEARCH_FIELD_KEY, empName);
-        getDriver().type(Constants.EMPNAME_SEARCH_FIELD_KEY, Keys.TAB+"");
-        //getDriver().type(Constants.EMPNAME_SEARCH_FIELD_KEY, "Y");
-        //getDriver().type(Constants.EMPNAME_SEARCH_FIELD_KEY, Keys.ARROW_DOWN+"");
-        getDriver().click(Constants.EMPNAME_SEARCH_DROPDOWN_KEY);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-
-        }
-        return this;
     }
     public OrangeHRMPage gotoleave() {
 
@@ -43,6 +29,12 @@ public class HomePage extends OrangeHRMBasePage {
 
         getDriver().click(Constants.MYINFO_LEFT_MENU);
         return new MyInfoPage((getSession().getCon().getCurrentDriver()));
+    }
+
+    public OrangeHRMPage gotoPerformance() {
+
+        getDriver().click(Constants.PERFORMANCE_LEFT_MENU);
+        return new PerformancePage((getSession().getCon().getCurrentDriver()));
     }
     public OrangeHRMPage gotoRecruitment() {
 
@@ -65,7 +57,7 @@ public class HomePage extends OrangeHRMBasePage {
     public OrangeHRMPage gotoBuzz() {
 
         getDriver().click(Constants.BUZZ_LEFT_MENU);
-        return new MaintenancePage((getSession().getCon().getCurrentDriver()));
+        return new BuzzPage((getSession().getCon().getCurrentDriver()));
     }
     }
 

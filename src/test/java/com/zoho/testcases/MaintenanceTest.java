@@ -44,6 +44,7 @@ public class MaintenanceTest {
 
         String username = data.get("Username");
         String password = data.get("Password");
+        System.out.println("--AA-"+data.get("EmployeeName"));
 
         new LaunchPage()
                 .openBrowser("chrome")
@@ -51,7 +52,8 @@ public class MaintenanceTest {
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoMaintenance()
-                .loginTest(data.get("Password"));
+                .loginTest(data.get("Password") , data.get("Vacancy"))
+                .AccessRecords(data.get("EmployeeName"));
 
     }
 

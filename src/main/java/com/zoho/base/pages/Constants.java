@@ -127,6 +127,8 @@ public class Constants {
 	public static final String DIRECTORY_LEFT_MENU ="directory_left_menu_xpath" ;
 	public static final String MYINFO_LEFT_MENU ="myinfo_left_menu_xpath" ;
 
+	public static final String PERFORMANCE_LEFT_MENU ="performance_left_menu_xpath" ;
+
 	public static final String MAINTENANCE_LEFT_MENU ="maintenance_left_menu_xpath" ;
 
 	public static final String BUZZ_LEFT_MENU ="buzz_left_menu_xpath" ;
