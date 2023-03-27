@@ -2,32 +2,25 @@ package com.zoho.testcases;
 
 
 import com.zoho.base.pages.Constants;
-import com.zoho.base.pages.OrangeHRMPage;
 import com.zoho.pages.normal.LaunchPage;
 import com.zoho.session.OrangeHRMTestSession;
 import com.zoho.util.DataUtil;
 import com.zoho.util.Xls_Reader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.SkipException;
 import org.testng.annotations.*;
 
 
-import java.io.IOException;
 import java.util.Hashtable;
-import java.util.List;
 
-public class EmployeeTest {
+public class PIMTest {
     OrangeHRMTestSession session;
-    String testName="EmployeeTest";
+    String testName="PIMTest";
     Xls_Reader xls = new Xls_Reader(System.getProperty("user.dir")+"//Data.xlsx");
 
     @BeforeMethod
     public void init() {
         session= new OrangeHRMTestSession();
-        session.init("Login Test");
+        session.init("PIMTest");
 
     }
 
@@ -37,7 +30,7 @@ public class EmployeeTest {
     }
 
     @Test(dataProvider = "getData")
-    public void searchEmployeeTest(Hashtable<String,String> data) {
+    public void PIMTest(Hashtable<String,String> data) {
         session.log(data.toString());
 
         if(!DataUtil.isRunnable(testName, xls) || data.get("Runmode").equals("N")) {
@@ -56,9 +49,20 @@ public class EmployeeTest {
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoPIM()
-                .createEmployee(data.get("FirstName"),data.get("LastName"),data.get("EmployeeID"))
-                .saveEmployeePersonalDetails()
-                .createEmployeeContanctDetails(data.get("Street1"),data.get("City"),data.get("State"),data.get("Zip"),data.get("MobileNo"));
+//                .createEmployee(data.get("FirstName"),data.get("LastName"),data.get("EmployeeID"))
+//                .saveEmployeePersonalDetails()
+//                .createEmployeeContanctDetails(data.get("Street1"),data.get("City"),data.get("State"),data.get("Zip"),data.get("MobileNo"))
+//                .emergencyContact(data.get("Name"),data.get("Relationship"),data.get("MobileNo"))
+//                .dependent(data.get("DependentName"))
+//                .immigration()
+//                .job()
+//                .salaryPage()
+//                .taxPage()
+//                .reportPage()
+//                .qualificationPage()
+//                .membershipPage()
+                .reportpage(data.get("ReportName"))
+                .configurationPage();
 
     }
 

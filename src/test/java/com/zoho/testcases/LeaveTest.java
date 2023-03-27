@@ -51,9 +51,13 @@ public class LeaveTest {
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoleave()
-                .AddLeaveComment(data.get("Comment"))
-                .Applyleave()
-                .Assignleave(data.get("EmployeeName"));
+//                .AddLeaveComment(data.get("Comment"))
+//                .Applyleave()
+//                .Assignleave(data.get("EmployeeName"))
+//                .myleaveTab()
+                .entitelmentsTopMenu(data.get("EmployeeName"),data.get("EntitlementsComment"))
+                .reportsTopMenu(data.get("EmployeeName"))
+                .configureTopMenu();
 
 
 

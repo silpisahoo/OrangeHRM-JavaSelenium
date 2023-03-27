@@ -132,6 +132,8 @@ public class Constants {
 	public static final String MAINTENANCE_LEFT_MENU ="maintenance_left_menu_xpath" ;
 
 	public static final String BUZZ_LEFT_MENU ="buzz_left_menu_xpath" ;
-	public static final String EMPNAME_SEARCH_FIELD_KEY = "empname_search_field_xpath";
-	public static final String EMPNAME_SEARCH_DROPDOWN_KEY = "empname_search_dropdown_element_xpath" ;
+	public static final String SEARCH_TAB_MENU ="search_tab_menu_xpath" ;
+
+//	public static final String EMPNAME_SEARCH_FIELD_KEY = "empname_search_field_xpath";
+//	public static final String EMPNAME_SEARCH_DROPDOWN_KEY = "empname_search_dropdown_element_xpath" ;
 }

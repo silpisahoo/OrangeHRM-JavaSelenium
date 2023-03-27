@@ -140,6 +140,16 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
+	public OrangeHRMPage gotoSearchtab() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage searchField(String passsword) {
+		return null;
+	}
+
+	@Override
 	public OrangeHRMPage checkIfUserExists(String username) {
 		return null;
 	}
@@ -248,7 +258,12 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
-	public OrangeHRMPage dependent(String empnamr) {
+	public OrangeHRMPage dependent(String dependentname) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage reportpage(String reportName) {
 		return null;
 	}
 
@@ -313,6 +328,11 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 	}
 
 	@Override
+	public OrangeHRMPage configurationPage() {
+		return null;
+	}
+
+	@Override
 	public OrangeHRMPage employeeTrackerstest(String empName) {
 		return null;
 	}
@@ -339,6 +359,32 @@ public class OrangeHRMBasePage implements OrangeHRMPage {
 
 	@Override
 	public OrangeHRMPage AccessRecords(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage Reports(String projectName , String empName){
+
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage myleaveTab() {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage entitelmentsTopMenu(String empName, String text) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage reportsTopMenu(String empName) {
+		return null;
+	}
+
+	@Override
+	public OrangeHRMPage configureTopMenu() {
 		return null;
 	}
 

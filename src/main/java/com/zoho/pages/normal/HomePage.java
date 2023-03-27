@@ -3,7 +3,6 @@ package com.zoho.pages.normal;
 import com.zoho.base.pages.Constants;
 import com.zoho.base.pages.OrangeHRMBasePage;
 import com.zoho.base.pages.OrangeHRMPage;
-import org.openqa.selenium.Keys;
 
 public class HomePage extends OrangeHRMBasePage {
 
@@ -13,7 +12,7 @@ public class HomePage extends OrangeHRMBasePage {
     }
     public OrangeHRMPage gotoPIM() {
         getDriver().click(Constants.PIM_LEFT_MENU);
-        return new EmployeePage(getSession().getCon().getCurrentDriver());
+        return new PIMPage(getSession().getCon().getCurrentDriver());
     }
     public OrangeHRMPage gotoleave() {
 
@@ -58,6 +57,11 @@ public class HomePage extends OrangeHRMBasePage {
 
         getDriver().click(Constants.BUZZ_LEFT_MENU);
         return new BuzzPage((getSession().getCon().getCurrentDriver()));
+    }
+    public OrangeHRMPage gotoSearchtab() {
+
+        getDriver().click(Constants.SEARCH_TAB_MENU);
+        return new SearchPage((getSession().getCon().getCurrentDriver()));
     }
     }
 

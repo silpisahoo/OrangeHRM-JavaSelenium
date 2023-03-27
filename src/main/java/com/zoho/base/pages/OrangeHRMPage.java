@@ -50,6 +50,8 @@ public interface OrangeHRMPage {
     OrangeHRMPage nationalitiesMenu(String nationName);
     OrangeHRMPage corporateBrandingMenu();
     OrangeHRMPage configurationMenu(String testEmail);
+    OrangeHRMPage gotoSearchtab();
+    OrangeHRMPage searchField(String passsword);
     OrangeHRMPage checkIfUserExists(String username);
     OrangeHRMPage gotoPIM();
     OrangeHRMPage searchEmployee(String empName);
@@ -76,7 +78,8 @@ public interface OrangeHRMPage {
     OrangeHRMPage personalDetails();
     OrangeHRMPage contactDetails(String mobileNum);
     OrangeHRMPage emergencyContact(String empnamr , String relationshipName ,String mobileNo);
-    OrangeHRMPage dependent(String empnamr );
+    OrangeHRMPage dependent(String dependentname );
+    OrangeHRMPage reportpage(String reportName);
     OrangeHRMPage immigration( );
     OrangeHRMPage job();
     OrangeHRMPage salaryPage();
@@ -89,6 +92,7 @@ public interface OrangeHRMPage {
     OrangeHRMPage myReviewstest();
     OrangeHRMPage myTrackerstest( String log , String comment);
     OrangeHRMPage cinfigureTest( String empName);
+    OrangeHRMPage configurationPage();
 
     OrangeHRMPage employeeTrackerstest( String empName);
 
@@ -100,8 +104,14 @@ public interface OrangeHRMPage {
     OrangeHRMPage loginTest(String passsword , String vacancyName);
 
     OrangeHRMPage AccessRecords(String empName);
+    public OrangeHRMPage Reports(String projectName , String empName);
+    public OrangeHRMPage myleaveTab();
+    public OrangeHRMPage entitelmentsTopMenu(String empName , String text);
+    public OrangeHRMPage reportsTopMenu(String empName);
+    public OrangeHRMPage configureTopMenu();
 
-    OrangeHRMPage gotoBuzz();
+
+        OrangeHRMPage gotoBuzz();
     OrangeHRMPage BuzzNewsfeedtest( String statusUpdate ,String commentBox);
     OrangeHRMPage mostrecentposttest();
     OrangeHRMPage mostLikedposttest();

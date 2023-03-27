@@ -30,6 +30,7 @@ public interface WebConnector extends OrangeHRMWebConnector {
 	void clear(String objectKey);
 	void select(String objectKey,String data);
 	By getObject(String objectKey);
+	void waitForElement(WebElement element);
 	
 	
 }

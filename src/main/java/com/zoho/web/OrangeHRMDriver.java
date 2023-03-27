@@ -1,6 +1,7 @@
 package com.zoho.web;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.zoho.listener.ZohoEventListener;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrangeHRMDriver extends OrangeHRMValidationDriver {
 	
@@ -104,6 +107,11 @@ public class OrangeHRMDriver extends OrangeHRMValidationDriver {
 	
 	public void select(String objectKey,String data) {
 		
+	}
+	public void waitForElement(WebElement element){
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOf(element));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	
 	

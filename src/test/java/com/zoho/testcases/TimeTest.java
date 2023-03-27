@@ -52,12 +52,13 @@ public class TimeTest {
                 .submitUsernameAndPassword(username, password)
                 .validator(false).validateTitle(Constants.HOME_PAGE_TITLE_KEY)
                 .gotoTime()
-                .selectMyTimesheet()
+              // .selectMyTimesheet();
                //.EnterTimeForTimesheet(data.get("ProjectName"));
 
-        .selectEmployeeTimesheet(data.get("EmployeeName"))
-                .Projectinfo(data.get("Name")+num, data.get("Description") )
-                .Projectinfoforproject(data.get("Name"), data.get("CustomerName"), data.get("Description"), data.get("ProjectAdmin") );
+       // .selectEmployeeTimesheet(data.get("EmployeeName"))
+             //   .Projectinfo(data.get("Name")+num, data.get("Description") )
+             //   .Projectinfoforproject(data.get("Name"), data.get("CustomerName"), data.get("Description"), data.get("ProjectAdmin") )
+               .Reports(data.get("ProjectName"),data.get("EmployeeName"));
 
 
 
